@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Online Banking Dashboard</title>
+    <title>Wells Fargo - Dashboard</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -19,7 +19,7 @@
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         }
         .header {
-            background: #0047AB;
+            background: #cb0016;
             color: white;
             padding: 15px;
             text-align: center;
@@ -46,6 +46,7 @@
             padding: 10px;
             margin: 5px 0;
             border-radius: 5px;
+            cursor: pointer;
         }
         .btn {
             display: block;
@@ -53,22 +54,21 @@
             padding: 10px;
             margin-top: 10px;
             font-size: 16px;
-            background: #0047AB;
+            background: #cb0016;
             color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
             text-align: center;
         }
-        .btn:disabled {
-            background: gray;
-            cursor: not-allowed;
+        .btn:hover {
+            background: #a80012;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">Bank Name</div>
+        <div class="header">Wells Fargo - Dashboard</div>
         <div class="balance-section">
             <p><b>Account Holder:</b> John Doe</p>
             <p><b>Account Number:</b> 1234-5678-9101</p>
@@ -76,7 +76,7 @@
         </div>
         <div class="transactions">
             <h3>Recent Transactions</h3>
-            <div class="transaction">
+            <div class="transaction" onclick="window.location.href='transactions.html'">
                 <span>Amazon Purchase</span>
                 <span style="color: red;">-$120.00</span>
             </div>
@@ -89,9 +89,15 @@
                 <span style="color: red;">-$300.00</span>
             </div>
         </div>
-        <button class="btn" disabled>Withdraw (Unavailable)</button>
-        <button class="btn">Transfer Money</button>
-        <button class="btn">View Statements</button>
+        <button class="btn" onclick="withdraw()">Withdraw Money</button>
     </div>
+    <script>
+        function withdraw() {
+            let amount = prompt("Enter withdrawal amount:");
+            if (amount) {
+                alert("Withdrawal of $" + amount + " is being processed!");
+            }
+        }
+    </script>
 </body>
 </html>
