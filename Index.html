@@ -1,16 +1,61 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My Bank Login</title>
+    <title>Wells Fargo Online Banking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 100%;
+            max-width: 400px;
+            margin: 100px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .header {
+            background: #cb0016;
+            color: white;
+            padding: 15px;
+            font-size: 20px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        .input-box {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .btn {
+            width: 100%;
+            padding: 10px;
+            background: #cb0016;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background: #a80012;
+        }
+    </style>
 </head>
 <body>
-    <h2>Welcome to My Bank</h2>
-    <form action="dashboard.html">
-        <label>Username:</label> 
-        <input type="text"><br><br>
-        <label>Password:</label> 
-        <input type="password"><br><br>
-        <input type="submit" value="Login">
-    </form>
+    <div class="container">
+        <div class="header">Wells Fargo Online Banking</div>
+        <h3>Login to Your Account</h3>
+        <input type="text" class="input-box" placeholder="Username">
+        <input type="password" class="input-box" placeholder="Password">
+        <button class="btn" onclick="window.location.href='dashboard.html'">Login</button>
+    </div>
 </body>
 </html>
