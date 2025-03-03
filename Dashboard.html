@@ -1,17 +1,65 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE html>
 <html>
-
+<head>
+    <title>Bank Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 90%;
+            max-width: 600px;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+        }
+        .balance {
+            font-size: 24px;
+            font-weight: bold;
+            color: green;
+            text-align: center;
+        }
+        .account-info {
+            margin-top: 20px;
+            padding: 10px;
+            background: #ddd;
+            border-radius: 5px;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            font-size: 16px;
+            background: blue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:disabled {
+            background: gray;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
 <body>
-<p class="p1"><span class="s1">&lt;!DOCTYPE </span><span class="s2">html</span><span class="s1">&gt;</span></p>
-<p class="p2"><span class="s3">&lt;</span><span class="s1">html</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s3">&lt;</span><span class="s1">head</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s1"><span class="Apple-converted-space">    </span>&lt;</span><span class="s4">title</span><span class="s1">&gt;Bank Dashboard&lt;/</span><span class="s4">title</span><span class="s1">&gt;</span></p>
-<p class="p2"><span class="s3">&lt;/</span><span class="s1">head</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s3">&lt;</span><span class="s1">body</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s1"><span class="Apple-converted-space">    </span>&lt;</span><span class="s4">h2</span><span class="s1">&gt;Welcome, User!&lt;/</span><span class="s4">h2</span><span class="s1">&gt;</span></p>
-<p class="p3"><span class="s1"><span class="Apple-converted-space">    </span>&lt;</span><span class="s4">p</span><span class="s1">&gt;Your Balance: &lt;</span><span class="s4">b</span><span class="s1">&gt;$10,000.00&lt;/</span><span class="s4">b</span><span class="s1">&gt;&lt;/</span><span class="s4">p</span><span class="s1">&gt;</span></p>
-<p class="p3"><span class="s1"><span class="Apple-converted-space">    </span>&lt;</span><span class="s4">button</span><span class="s1"> </span><span class="s5">disabled</span><span class="s1">&gt;Withdraw (Temporarily Unavailable)&lt;/</span><span class="s4">button</span><span class="s1">&gt;</span></p>
-<p class="p2"><span class="s3">&lt;/</span><span class="s1">body</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s3">&lt;/</span><span class="s1">html</span><span class="s3">&gt;</span></p>
+    <div class="container">
+        <h2>Welcome, User!</h2>
+        <div class="account-info">
+            <p><b>Account Number:</b> 1234-5678-9101</p>
+            <p><b>Account Type:</b> Checking</p>
+        </div>
+        <p class="balance">Available Balance: <b>$10,000.00</b></p>
+        <button disabled>Withdraw (Temporarily Unavailable)</button>
+    </div>
 </body>
 </html>
