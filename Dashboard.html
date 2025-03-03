@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Bank Dashboard</title>
+    <title>Online Banking Dashboard</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -18,34 +18,49 @@
             border-radius: 10px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         }
-        h2 {
+        .header {
+            background: #0047AB;
+            color: white;
+            padding: 15px;
             text-align: center;
+            font-size: 20px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        .balance-section {
+            text-align: center;
+            padding: 20px;
         }
         .balance {
             font-size: 24px;
             font-weight: bold;
             color: green;
-            text-align: center;
         }
-        .account-info {
+        .transactions {
             margin-top: 20px;
+        }
+        .transaction {
+            display: flex;
+            justify-content: space-between;
+            background: #eee;
             padding: 10px;
-            background: #ddd;
+            margin: 5px 0;
             border-radius: 5px;
         }
-        button {
+        .btn {
             display: block;
             width: 100%;
             padding: 10px;
-            margin-top: 20px;
+            margin-top: 10px;
             font-size: 16px;
-            background: blue;
+            background: #0047AB;
             color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            text-align: center;
         }
-        button:disabled {
+        .btn:disabled {
             background: gray;
             cursor: not-allowed;
         }
@@ -53,13 +68,30 @@
 </head>
 <body>
     <div class="container">
-        <h2>Welcome, User!</h2>
-        <div class="account-info">
+        <div class="header">Bank Name</div>
+        <div class="balance-section">
+            <p><b>Account Holder:</b> John Doe</p>
             <p><b>Account Number:</b> 1234-5678-9101</p>
-            <p><b>Account Type:</b> Checking</p>
+            <p class="balance">Available Balance: <b>$10,000.00</b></p>
         </div>
-        <p class="balance">Available Balance: <b>$10,000.00</b></p>
-        <button disabled>Withdraw (Temporarily Unavailable)</button>
+        <div class="transactions">
+            <h3>Recent Transactions</h3>
+            <div class="transaction">
+                <span>Amazon Purchase</span>
+                <span style="color: red;">-$120.00</span>
+            </div>
+            <div class="transaction">
+                <span>Salary Deposit</span>
+                <span style="color: green;">+$2,500.00</span>
+            </div>
+            <div class="transaction">
+                <span>Transfer to Mike</span>
+                <span style="color: red;">-$300.00</span>
+            </div>
+        </div>
+        <button class="btn" disabled>Withdraw (Unavailable)</button>
+        <button class="btn">Transfer Money</button>
+        <button class="btn">View Statements</button>
     </div>
 </body>
 </html>
